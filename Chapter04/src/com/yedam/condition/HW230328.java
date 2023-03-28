@@ -1,9 +1,11 @@
 package com.yedam.condition;
 
+import java.util.Scanner;
+
 public class HW230328 {
 
 	public static void main(String[] args) {
-		//Scanner scanner = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
 		// 문제1) 각 연산식을 대입 연산자 하나로 구성된 연산식으로 수정하세요.
 		int val = 0;
@@ -44,11 +46,18 @@ public class HW230328 {
 		// 제3사분면 : x<0, y<0
 		// 제4사분면 : x>0, y<0
 		// 문제출처, 백준(https://www.acmicpc.net/) 14681번 문제
-		/* int n = 1
 				
-		for(i>0; i++) {
-			System.out.println("제" + n"분면");
-		} */
+		
+		/*
+		 * int x = sc.nextInt(); int y = sc.nextInt();
+		 * 
+		 * if(x>0 && y>0) { System.out.println(1); } else if (x<0 && y>0) {
+		 * System.out.println(2); } else if (x<0 && y<0) { System.out.println(3); } else
+		 * if (x>0 && y<0) { System.out.println(4); }
+		 * 
+		 * res.close();
+		 */
+		 		
 
 		// 문제5) 연도가 주어졌을 때 해당 년도가 윤년인지를 확인해서 출력하도록 하세요.
 		// 윤년은 연도가 4의 배수이면서 100의 배수가 아닐 때 또는 400의 배수일때입니다.
@@ -56,11 +65,34 @@ public class HW230328 {
 		// 1900년은 100의 배수이고 400의 배수는 아니기 때문에 윤년이 아닙니다.
 		// HiNT : 이중 IF문 사용
 		// 문제출처, 백준(https://www.acmicpc.net/) 2753번 문제
-		int leap = 0;
-		if ((leap/4 == 0 && leap/100 !=0) || leap/400 ==0) {
-			System.out.println("윤년입니다");
-		}
 		
+		//1번 방식
+		//Scanner scanner = new Scanner(System.in);
+		
+		  int leap = sc.nextInt();
+		  
+		  if (leap % 4 == 0 && leap % 100 != 0){
+			  System.out.println("윤년입니다");
+		  } else if(leap % 400 == 0) {
+			  System.out.println("윤년입니다");
+		   } else {
+			   System.out.println("윤년이 아닙니다");
+		   }
+		 
+		//scanner.close();
+		  
+		// 2번 방식
+		if(a%4 == 0) {
+			if(a%400 !=0 && a%100 ==0) {
+				System.out.println("윤년이 아닙니다");
+			} else {
+				System.out.println("윤년입니다");
+			}
+			else {
+				System.out.println("윤년이 아닙니다");
+			}
+		}
+		  
 		// 문제6) switch문을 이용하여 가위, 바위, 보 중 하나가 주어졌을 때 사용자 어떤 값을 가져야 이길 수 있는 지를 출력하도록
 		// 구현하세요.
 		// 예를 들어, 가위가 주어졌을 때 "이기기 위해선 바위를 내야합니다." 라고 출력하도록 하세요.
@@ -79,6 +111,7 @@ public class HW230328 {
 			break;
 		}*/
 
+		
 		// 문제7) 차례대로 m과 n을 입력받아 m단을 n번째까지 출력하도록 하세요.
 		// 예를 들어 2와 3을 입력받았을 경우 아래처럼 출력합니다.
 		// 2 X 1 = 2
@@ -100,6 +133,9 @@ public class HW230328 {
 			}
 		}
 
+		
+		
+	}
+		
 	}
 
-}
