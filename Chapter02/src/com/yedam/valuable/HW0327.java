@@ -80,8 +80,11 @@ public class HW0327 {
 		    예시) 373 일 경우 3 + 7 + 3 = 13 으로 결과는 13입니다.
 		    힌트) 곱하기 연산자 (*), 나누기 연산자( / ) 와 빼기 연산자 ( - ) 를 이용하세요. */
 		int value = 485;
-		resultd = int (100*4) + int (100-20);  
-		System.out.println(resultd);
+		int hundred = value /100;
+		int ten = (value / 100 ) * 10 - 32 ;
+		int one = (value / 100) / 10 / 10;
+		
+		System.out.println(ten);
 
 	}
 
