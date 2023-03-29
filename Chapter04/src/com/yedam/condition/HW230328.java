@@ -31,13 +31,14 @@ public class HW230328 {
 	  			    만일 그렇지 않다면 'both a and b are zero or more'를 출력하도록 구현하세요. */ 
 		int a = 10;
 		int b = -8;
+		String strResult;
+		
 		if (a<0 || b<0) {
-			System.out.println("One of a or b is negative number");
+			strResult = "One of a or b is negative number";
 		} else {
-			System.out.println("both a and b are zero or more");
+			strResult = "both a and b are zero or more";
 		}
-		//String strResult;
-		//System.out.println(strResult);
+		System.out.println(strResult);
 
 		// 문제4) 차례대로 x와 y의 값이 주어졌을 때 어느 사분면에 해당되는지 출력하도록 구현하세요.
 		// 각 사분면에 해당 하는 x와 y의 값은 아래를 참조하세요.
@@ -48,15 +49,20 @@ public class HW230328 {
 		// 문제출처, 백준(https://www.acmicpc.net/) 14681번 문제
 				
 		
-		/*
-		 * int x = sc.nextInt(); int y = sc.nextInt();
-		 * 
-		 * if(x>0 && y>0) { System.out.println(1); } else if (x<0 && y>0) {
-		 * System.out.println(2); } else if (x<0 && y<0) { System.out.println(3); } else
-		 * if (x>0 && y<0) { System.out.println(4); }
-		 * 
-		 * res.close();
-		 */
+		
+		  int x = sc.nextInt(); 
+		  int y = sc.nextInt();
+		  
+		  if(x>0 && y>0) { 
+			  System.out.println(1); 
+			  } else if (x<0 && y>0) {
+			  System.out.println(2); 
+		  } else if (x<0 && y<0) {
+			  System.out.println(3); 
+		  } else if (x>0 && y<0) {
+			  System.out.println(4); 
+		  }
+		  		 
 		 		
 
 		// 문제5) 연도가 주어졌을 때 해당 년도가 윤년인지를 확인해서 출력하도록 하세요.
@@ -80,18 +86,7 @@ public class HW230328 {
 		   }
 		 
 		//scanner.close();
-		  
-		// 2번 방식
-		if(a%4 == 0) {
-			if(a%400 !=0 && a%100 ==0) {
-				System.out.println("윤년이 아닙니다");
-			} else {
-				System.out.println("윤년입니다");
-			}
-			else {
-				System.out.println("윤년이 아닙니다");
-			}
-		}
+		
 		  
 		// 문제6) switch문을 이용하여 가위, 바위, 보 중 하나가 주어졌을 때 사용자 어떤 값을 가져야 이길 수 있는 지를 출력하도록
 		// 구현하세요.
